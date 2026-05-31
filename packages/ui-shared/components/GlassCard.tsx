@@ -7,13 +7,15 @@ interface GlassCardProps {
   variant?: 'course' | 'stats' | 'testimonial' | 'partnership';
   className?: string;
   onClick?: () => void;
+  id?: string;
 }
 
 export const GlassCard: React.FC<GlassCardProps> = ({
   children,
   variant = 'course',
   className = '',
-  onClick
+  onClick,
+  id
 }) => {
   // Select style maps based on Glassmorphism 2.0 Specifications
   const getVariantStyles = () => {
@@ -32,6 +34,7 @@ export const GlassCard: React.FC<GlassCardProps> = ({
 
   return (
     <motion.div
+      id={id}
       variants={glassCardEntry}
       initial="hidden"
       animate="visible"
@@ -42,5 +45,6 @@ export const GlassCard: React.FC<GlassCardProps> = ({
     </motion.div>
   );
 };
+
 
 export default GlassCard;

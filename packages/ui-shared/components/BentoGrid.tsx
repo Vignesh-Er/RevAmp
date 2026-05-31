@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
-import { motion } from 'react';
-import { motion as motionDiv } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { bentoContainer, bentoItem } from '../animations/variants';
 import GlassCard from './GlassCard';
 import HeroSection from './HeroSection';
@@ -12,7 +11,7 @@ import { BookOpen, Sparkles, UserCheck, ArrowRight } from 'lucide-react';
 export const BentoGrid: React.FC = () => {
   return (
     <section className="py-20 px-4 md:px-8 max-w-7xl mx-auto" id="bento-overview">
-      <motionDiv
+      <motion.div
         variants={bentoContainer}
         initial="hidden"
         whileInView="show"
@@ -21,25 +20,25 @@ export const BentoGrid: React.FC = () => {
       >
         
         {/* Row 1, Tile 1: Hero Tile (col 1-8, row 1) */}
-        <motionDiv
+        <motion.div
           variants={bentoItem}
           className="md:col-span-6 lg:col-span-8 bg-white border border-gray-100 rounded-glass-24 shadow-sm overflow-hidden"
         >
           <HeroSection />
-        </motionDiv>
+        </motion.div>
 
         {/* Row 1, Tile 2: Stats Tile (col 9-12, row 1) */}
-        <motionDiv
+        <motion.div
           variants={bentoItem}
           className="md:col-span-6 lg:col-span-4"
         >
           <GlassCard variant="stats" className="w-full h-full">
             <StatsCounter />
           </GlassCard>
-        </motionDiv>
+        </motion.div>
 
         {/* Row 2, Tile 1: Course Preview Tile (col 1-4, row 2) */}
-        <motionDiv
+        <motion.div
           variants={bentoItem}
           className="md:col-span-3 lg:col-span-4"
         >
@@ -59,10 +58,10 @@ export const BentoGrid: React.FC = () => {
               View All 6 Domains <ArrowRight size={16} />
             </CTAButton>
           </GlassCard>
-        </motionDiv>
+        </motion.div>
 
         {/* Row 2, Tile 2: Testimonial Preview Tile (col 5-8, row 2) */}
-        <motionDiv
+        <motion.div
           variants={bentoItem}
           className="md:col-span-3 lg:col-span-4"
         >
@@ -82,10 +81,10 @@ export const BentoGrid: React.FC = () => {
               Read Career Outcomes <ArrowRight size={16} />
             </CTAButton>
           </GlassCard>
-        </motionDiv>
+        </motion.div>
 
         {/* Row 2, Tile 3: AI Analyzer Teaser Tile (col 9-12, row 2) */}
-        <motionDiv
+        <motion.div
           variants={bentoItem}
           className="md:col-span-6 lg:col-span-4"
         >
@@ -105,10 +104,10 @@ export const BentoGrid: React.FC = () => {
               Test Your Score Now
             </CTAButton>
           </GlassCard>
-        </motionDiv>
+        </motion.div>
 
         {/* Row 3, Tile 1: CTA Banner Tile (col 1-12, row 3) */}
-        <motionDiv
+        <motion.div
           variants={bentoItem}
           className="md:col-span-6 lg:col-span-12"
         >
@@ -125,11 +124,12 @@ export const BentoGrid: React.FC = () => {
               Get Started Today
             </CTAButton>
           </div>
-        </motionDiv>
+        </motion.div>
 
-      </motionDiv>
+      </motion.div>
     </section>
   );
 };
 
 export default BentoGrid;
+

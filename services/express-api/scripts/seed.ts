@@ -1,8 +1,8 @@
 import mongoose from 'mongoose';
-import { SkillsReference } from '../../packages/db-schemas/schemas/skillsReference.schema';
-import { Contact } from '../../packages/db-schemas/schemas/contact.schema';
-import { Lead } from '../../packages/db-schemas/schemas/lead.schema';
-import { Consent } from '../../packages/db-schemas/schemas/consent.schema';
+import { SkillsReference } from '../../../packages/db-schemas/schemas/skillsReference.schema';
+import { Contact } from '../../../packages/db-schemas/schemas/contact.schema';
+import { Lead } from '../../../packages/db-schemas/schemas/lead.schema';
+import { Consent } from '../../../packages/db-schemas/schemas/consent.schema';
 
 const mongoUri = process.env.MONGODB_URI || 'mongodb://localhost:27017/digimation_flight_db';
 

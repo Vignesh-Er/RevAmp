@@ -1,0 +1,14 @@
+{
+  "name": "db-schemas",
+  "version": "1.0.0",
+  "private": true,
+  "main": "./schemas/index.ts",
+  "types": "./schemas/index.ts",
+  "dependencies": {
+    "mongoose": "^8.3.4",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5"
+  }
+}
