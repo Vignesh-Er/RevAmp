@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Syne:wght@700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-gold: #FCC509;
+  --color-gold-light: #FDE580;
+  --color-gold-dim: #D4A608;
+  --color-rose-white: #FFF9FA;
+  --color-charcoal: #17171D;
+  --color-surface-1: #FFF4F5;
+  --color-surface-2: #FFEEF0;
+  --color-surface-dark: #1E1E25;
+  --color-text-secondary: #3D3D45;
+  --color-text-muted: #6B6B75;
+  --color-danger: #D93025;
+  --color-success: #1B8A4E;
+  
+  --font-syne: 'Syne', sans-serif;
+  --font-nunito: 'Nunito', sans-serif;
+}
+
+body {
+  background-color: var(--color-rose-white);
+  color: var(--color-charcoal);
+  font-family: var(--font-nunito);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-syne);
+  font-weight: 700;
+  color: var(--color-charcoal);
+}
+
+/* Custom Webkit Scrollbars matching brand palette */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-rose-white);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-text-muted);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gold-dim);
+}
+
+/* Reduced Motion Compliance */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-delay: 0s !important;
+    animation-duration: 0s !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0s !important;
+    scroll-behavior: auto !important;
+  }
+}
