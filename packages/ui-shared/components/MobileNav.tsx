@@ -12,9 +12,10 @@ interface LinkItem {
 interface MobileNavProps {
   links: LinkItem[];
   onClose: () => void;
+  onSignInClick?: () => void;
 }
 
-export const MobileNav: React.FC<MobileNavProps> = ({ links, onClose }) => {
+export const MobileNav: React.FC<MobileNavProps> = ({ links, onClose, onSignInClick }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: -20 }}
@@ -37,7 +38,12 @@ export const MobileNav: React.FC<MobileNavProps> = ({ links, onClose }) => {
       </div>
 
       <div className="flex flex-col space-y-4 pb-12">
-        <CTAButton variant="secondary" size="lg" className="w-full" onClick={onClose}>
+        <CTAButton 
+          variant="secondary" 
+          size="lg" 
+          className="w-full" 
+          onClick={onSignInClick || onClose}
+        >
           Sign In
         </CTAButton>
         <CTAButton variant="primary" size="lg" href="#courses" className="w-full" onClick={onClose}>
