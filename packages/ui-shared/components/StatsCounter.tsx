@@ -53,7 +53,7 @@ const StatItem: React.FC<StatItemProps> = ({ target, suffix, label, subLabel, tr
         {label}
       </p>
       {subLabel && (
-        <p className="font-nunito text-[11px] text-[#6B6B75] leading-none mt-0.5">
+        <p className="font-nunito text-[11px] text-white/60 leading-none mt-0.5">
           {subLabel}
         </p>
       )}
@@ -81,7 +81,7 @@ export const StatsCounter: React.FC = () => {
         <h3 className="font-syne font-bold text-xl text-white mb-2 leading-snug">
           Our Placement Engine
         </h3>
-        <p className="font-nunito text-[#6B6B75] text-xs leading-relaxed mb-8">
+        <p className="font-nunito text-white/70 text-xs leading-relaxed mb-8">
           Verified career transitions over our 21-month operational timeframe.
         </p>
       </div>
