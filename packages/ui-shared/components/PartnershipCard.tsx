@@ -24,11 +24,11 @@ export const PartnershipCard: React.FC<PartnershipCardProps> = ({
     <GlassCard variant="partnership" className="p-8 h-full flex flex-col justify-between hover:shadow-md transition-shadow duration-300 border-l-4 border-l-[#FCC509]/30">
       <div>
         {/* Model ID Indicator */}
-        <div className="flex justify-between items-center mb-6">
-          <span className="px-2.5 py-0.5 bg-[#17171D] text-[#FFF9FA] rounded-md text-[10px] font-bold font-nunito uppercase tracking-widest">
+        <div className="flex flex-col items-start space-y-2 mb-6">
+          <span className="inline-block px-2.5 py-1 bg-[#17171D] text-[#FFF9FA] rounded-md text-[10px] font-bold font-nunito uppercase tracking-widest shrink-0">
             Model 0{modelNumber}
           </span>
-          <span className="text-xs font-nunito font-semibold text-[#6B6B75]">
+          <span className="text-xs font-nunito font-semibold text-[#6B6B75] leading-normal">
             Target: {buyer}
           </span>
         </div>
