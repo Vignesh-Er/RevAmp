@@ -1,8 +1,6 @@
 {
   "version": 2,
-  "framework": "nextjs",
   "buildCommand": "turbo run build --filter=web-marketing",
-  "outputDirectory": "apps/web-marketing/.next",
   "headers": [
     {
       "source": "/static/(.*)",
